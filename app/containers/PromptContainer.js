@@ -8,7 +8,6 @@ var PromptContainer = React.createClass({
         router: React.PropTypes.object.isRequired
     },
 
-
     getInitialState () {
         return {
             username: ''
@@ -31,28 +30,22 @@ var PromptContainer = React.createClass({
         if (this.props.routeParams.playerOne) {
             console.log(this.context)
             // go to battle
-            this.context.router.push({
-                pathname: '/battle',
-                query: {
-                    playerOne: this.props.routeParams.playerOne,
-                    playerTwo: this.props.routeParams.playerTwo
-                }
-            })
+            
 
         } else {
             console.log(this.context)
             // go to player two
-            this.context.router.push('/playerTwo/' + this.state.username)
+            
         }
     },
 
-    render () {
 
+    render () {
         return (
             <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
                 <h1>{this.props.route.header}</h1>
                 <div className="col-sm-12">
-                    <form onSubmit={this.onSubmitUser}>
+                    <form onSubmit={this.OnSubmitUser}>
                         <div className="form-group">
                             <input
                                 className="form-control"
@@ -65,7 +58,7 @@ var PromptContainer = React.createClass({
                             <button
                                 className="btn btn-block btn-success"
                                 type="submit">
-                                Continue
+                                    Continue
                             </button>
                         </div>
                     </form>
