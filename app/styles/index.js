@@ -1,8 +1,10 @@
-//style.index.js
-
+//styles/index.js
 var styles = {
-    transparentBg: {
-        background: 'transparent'
+	transparentBg: {
+		background: 'transparent'
+	},
+    space: {
+        marginTop: '25px'
     }
 }
 
